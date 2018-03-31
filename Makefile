@@ -23,21 +23,21 @@ all: $(BIN)
 
 #Generate executables
 main: $(OBJ1) main.o
-	g++ -std=c++11 $(OBJ1) main.o -o inverse_compositional_algorithm $(LFLAGS) -lstdc++
+	$(CXX) -std=c++11 $(OBJ1) main.o -o inverse_compositional_algorithm $(LFLAGS) -lstdc++
 
 noise: mt19937ar.o file.o iio.o noise.o
-	g++ -std=c++11 $(OBJ1)  noise.o -o add_noise  $(LFLAGS) -lstdc++
+	$(CXX) -std=c++11 $(OBJ1)  noise.o -o add_noise  $(LFLAGS) -lstdc++
 
 output: output.o file.o iio.o bicubic_interpolation.o inverse_compositional_algorithm.o transformation.o
-	g++ -std=c++11 $(OBJ1)  output.o -o generate_output  $(LFLAGS) -lstdc++
+	$(CXX) -std=c++11 $(OBJ1)  output.o -o generate_output  $(LFLAGS) -lstdc++
 
 #each object file is dependent on its source file, and whenever make needs to create
 #an object file, to follow this rule:
 %.o: %.c
-	gcc -std=c99  -c $< -o $@ $(INCLUDE) $(CFLAGS) $(LFLAGS)  -Wno-unused -pedantic -DNDEBUG -D_GNU_SOURCE
+	$(CC) -std=c99  -c $< -o $@ $(INCLUDE) $(CFLAGS)  -Wno-unused -pedantic -DNDEBUG -D_GNU_SOURCE
 
 %.o: %.cpp
-	g++ -std=c++11 -c $< -o $@ $(INCLUDE) $(CFLAGS) $(LFLAGS)
+	$(CXX) -std=c++11 -c $< -o $@ $(INCLUDE) $(CFLAGS) 
 
 clean:
 	rm -f $(OBJ) $(DEST)
