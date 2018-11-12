@@ -150,6 +150,7 @@ transformation.cpp: Compute the Jacobian and the composition of transformations
 zoom.cpp:   Compute the zoom-out of an image and the zoom-in of the parameters
 
 Complementary programs (used for the online demo only):
-output.cpp:  Program to compute some images and error metrics from the results
-noise.cpp:   Program to add Gaussian noise to the input images
-mt19937ar.c: Program to generate random numbers, used in noise.cpp
+equalization.c: Program to equalize the constrast of two images
+mt19937ar.c   : Program to generate random numbers, used in noise.cpp
+noise.cpp     : Program to add Gaussian noise to the input images
+output.cpp    : Program to compute some images and error metrics from the results
