@@ -21,7 +21,7 @@ on: A unifying framework: Part 2, Tech. Report CMU-RI-TR-03-01, Robotics
 Institute, Pittsburgh, PA, February 2003.
 
 This program is part of an IPOL publication:
-http://www.ipol.im/
+https://doi.org/10.5201/ipol.2018.222
 
 
 ******
@@ -41,7 +41,7 @@ Universidad de Las Palmas de Gran Canaria
 VERSION
 *******
 
-Version 1, released on ???
+Version 1, released on 2018-12-17
 
 
 *******
